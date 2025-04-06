@@ -1,0 +1,27 @@
+@use "./assets/abstracts" as *;
+@use "./assets/utility.scss" as *;
+
+
+.About {
+    max-width: 500px;
+  
+    @include clip(text);
+  
+    &__title {
+      @extend .--font-title;
+  
+      >h1:first-child {
+        text-transform: uppercase;
+  
+        @include clip(text, $gold);
+      }
+    }
+  
+    &__about {
+      >h2:first-child {
+        display: none;
+  
+        @extend .--font-title;
+      }
+    }
+  }

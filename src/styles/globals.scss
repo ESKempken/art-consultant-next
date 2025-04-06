@@ -1,0 +1,90 @@
+@use "./assets/abstracts.scss" as abstracts;
+
+// Darkmode
+:root {
+  --background-color: #{abstracts.$light};
+  --foreground-color: #{abstracts.$dark};
+  --crop: 0;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #0a0a0a;
+    --foreground-color: #ededed;
+  }
+} */
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;  
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: narkiss-text-variable, sans-serif;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-style: normal;
+  font-size: abstracts.font('md');
+  background: var(--background-color);
+  color: var(--foreground-color);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: abstracts.font('xl');
+  font-weight: 100;
+  line-height: unset;
+
+  // TODO thinner lettering and spacing
+}
+
+h2 {
+  font-size: abstracts.font('lg');
+  font-weight: 300;
+  line-height: unset;
+}
+
+h3 {
+  font-size: abstracts.font('md');
+  font-weight: 300;
+  line-height: unset;
+}
+
+// TODO remove
+hr {
+  border: none;
+
+  @each $key, $size in abstracts.$spacers {
+
+    &[data-size~="#{$key}"] {
+      height: $size;
+    }
+  }
+}

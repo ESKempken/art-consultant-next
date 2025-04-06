@@ -1,5 +1,5 @@
 import styles from "@/styles/Home.module.css";
-import TAbout from "@/components/TAbout";
+import TInfo from "@/components/TInfo";
 
 
 export default function Dev() {
@@ -10,7 +10,7 @@ export default function Dev() {
         <main>
             
             <section className={styles.Splash}>
-                <TAbout/>
+                <TInfo/>
                 <div id="gallery-container"></div>
             </section>
             
