@@ -1,0 +1,80 @@
+@use 'assets/abstracts.scss' as *;
+@use 'assets/utility.scss' as *;
+
+
+.CallToAction {
+    width: 75%;
+    height: 75%;
+    position: relative;
+    background-image: url('/assets/texture-noise_300x300.png'); // source - https://www.cssmatic.com/noise-texture
+    background-color: $pink-light;
+  
+    @include clip(padding-box);
+  
+    &__wrapper {
+      // FIXME
+      padding: spacer('xl');
+    }
+  
+    &__layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: spacer('xl') spacer('lg');
+      justify-content: center;
+    }
+  
+    &__services {
+      list-style: none;
+      text-align: right;
+      transform: skewX(-20deg);
+  
+      @include breakpoint('md') {
+        display: none;
+      }
+  
+      li {
+        transform: skewX(20deg); // Reverse child skew
+  
+        @extend .--font-title;
+  
+        text-transform: uppercase;
+        font-size: font('lg');
+        line-height: font('lg');
+  
+        &::after {
+          content: '';
+          display: inline-block;
+          vertical-align: sub;
+          width: font('md');
+          height: font('md');
+          margin-left: spacer('md');
+          background-image: url('/assets/logo-pink.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  
+    &__contact {
+      color: $dark;
+      margin-top: auto;
+      align-self: flex-end;
+      text-align: end;
+  
+      >a[aria-label='phone'] {
+        @extend .--font-title;
+  
+        font-size: font('lg');
+      }
+  
+      >a[aria-label='email'] {
+        font-size: font('md');
+        text-transform: lowercase;
+      }
+    }
+  
+    &__callToAction {
+      max-width: 800px; // FIXME Bandaid
+      text-align: center;
+    }
+  }
