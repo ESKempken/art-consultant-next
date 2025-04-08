@@ -1,8 +1,9 @@
 import styles from "@/styles/PAbout.module.scss";
 
 // Components 
-import TInfo from "@/components/OInfo";
-import TGallery from "@/components/OGallery";
+import OInfo from "@/components/OInfo";
+import OGallery from "@/components/OGallery";
+import OServices from "@/components/OServices";
 
 
 export default function About() {
@@ -13,12 +14,12 @@ export default function About() {
         <main>
             
             <section className={styles.Splash}>
-                <TInfo/>
-                <TGallery/>
+                <OInfo/>
+                <OGallery/>
             </section>
             
             <section>
-                <div id="services-container"></div>
+                <OServices/>
             </section>
     
             <section>

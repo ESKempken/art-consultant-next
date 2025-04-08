@@ -1,0 +1,59 @@
+@use 'assets/abstracts.scss' as *;
+@use 'assets/utility.scss' as *;
+
+
+.Services {
+    margin-bottom: spacer('lg');
+  
+    @extend .--safe-width;
+    @include clip(text);
+  
+    @include breakpoint('md') {
+      margin-bottom: spacer('xxxl');
+    }
+  
+    &__title {
+      @extend .--font-title;
+  
+      margin-bottom: spacer('sm');
+    }
+  
+    &__about {
+      // margin-bottom: spacer('xl');
+    }
+  
+    &__list {
+      margin-left: spacer('xl');
+      margin-right: spacer('xl');
+  
+      @include breakpoint('md') {
+        margin-left: spacer('md');
+        margin-right: 0;
+      }
+  
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: spacer('md');
+  
+      li {
+        min-width: 220px;
+        flex: 1 0 0;
+        list-style: none;
+  
+        >h3:first-child {
+          @extend .--font-title;
+  
+          text-transform: uppercase;
+          display: list-item;
+          list-style: disc;
+          margin-left: spacer('md');
+          margin-bottom: spacer('sm');
+        }
+  
+        >p:last-child {
+          font-size: font('sm');
+        }
+      }
+    }
+  }

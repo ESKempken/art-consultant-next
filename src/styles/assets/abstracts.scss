@@ -30,25 +30,28 @@ $frame-margin-x: map.get($spacers, 'sm');
 @mixin clip($clip, $inner-color: $dark) {
   $outter-color: $blue-light;
 
-  @if $clip == 'text' {
-    @include screen-gradient($inner-color, $outter-color);
+  // FIXME
+  color: black;
 
-    background-clip: text;
-  } @else if $clip == padding-box or $clip == content-box {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
+  // @if $clip == 'text' {
+  //   @include screen-gradient($inner-color, $outter-color);
 
-      @include screen-gradient(transparent, $outter-color);
+  //   background-clip: text;
+  // } @else if $clip == padding-box or $clip == content-box {
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     pointer-events: none;
 
-      background-clip: $clip;
-    }
-  }
+  //     @include screen-gradient(transparent, $outter-color);
+
+  //     background-clip: $clip;
+  //   }
+  // }
 }
 
 @mixin screen-gradient($inner-color: $dark, $outter-color: $blue-light, $clip: text) {
