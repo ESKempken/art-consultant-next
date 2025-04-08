@@ -1,0 +1,14 @@
+@use 'assets/utility.scss' as *;
+@use 'assets/abstracts.scss' as *;
+
+
+.Splash {
+    padding-top: spacer('xxxl');
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    min-height: 100vh;
+    gap: spacer('xl');
+  
+    @extend .--safe-width;
+  }

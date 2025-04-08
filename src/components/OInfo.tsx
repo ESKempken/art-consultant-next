@@ -1,8 +1,8 @@
 import Contact from "./MContact";
-import styles from "@/styles/TInfo.module.scss";
+import styles from "@/styles/OInfo.module.scss";
 
 
-export default function About() {
+export default function Info() {
   return (
     <div className={styles.About}>
 

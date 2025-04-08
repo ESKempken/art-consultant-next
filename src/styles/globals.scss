@@ -4,7 +4,7 @@
 :root {
   --background-color: #{abstracts.$light};
   --foreground-color: #{abstracts.$dark};
-  --crop: 0;
+  --crop: 25;
 }
 
 /* @media (prefers-color-scheme: dark) {

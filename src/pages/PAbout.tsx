@@ -1,8 +1,11 @@
-import styles from "@/styles/Home.module.css";
-import TInfo from "@/components/TInfo";
+import styles from "@/styles/PAbout.module.scss";
+
+// Components 
+import TInfo from "@/components/OInfo";
+import TGallery from "@/components/OGallery";
 
 
-export default function Dev() {
+export default function About() {
   return (
     <div>
         <div id="frame-container"></div>
@@ -11,7 +14,7 @@ export default function Dev() {
             
             <section className={styles.Splash}>
                 <TInfo/>
-                <div id="gallery-container"></div>
+                <TGallery/>
             </section>
             
             <section>

@@ -1,0 +1,51 @@
+
+@use "./assets/abstracts" as *;
+
+.Gallery {
+    display: flex;
+    flex-direction: column;
+    gap: spacer('lg');
+  
+    @include breakpoint('md') {
+      display: none;
+    }
+  
+    &__item {
+      overflow: hidden;
+      border-radius: 4px;
+      position: relative;
+  
+      @include clip(content-box);
+  
+      &:nth-child(1) {
+        img {
+          @include format-image('lg');
+  
+          border-bottom: 8px solid $pink-light;
+        }
+      }
+  
+      &:nth-child(2) {
+        align-self: flex-start;
+        clip-path: polygon(100% 0, 100% 37%, 70% 100%, 0 100%, 0 0);
+  
+        img {
+          @include format-image('sm');
+  
+          border-top: 8px solid $blue-light;
+        }
+      }
+  
+      &:nth-child(3) {
+        align-self: flex-end;
+        margin-top: -50%; // FIXME Clean
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 63%, 30% 0);
+  
+        img {
+          @include format-image('sm');
+  
+          border-bottom: 8px solid $gold;
+        }
+      }
+    }
+  }
