@@ -3,7 +3,7 @@
 
 
 .Services {
-    margin-bottom: spacer('lg');
+    // padding-bottom: spacer('lg');
   
     @extend .--safe-width;
     @include clip(text);

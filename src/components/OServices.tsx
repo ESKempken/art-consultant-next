@@ -53,6 +53,8 @@ export default function Services() {
                     <p>All types of consultation are tailored to your needs.</p>
                 </li>
             </ul>
+
+            <hr data-size="xl" />
         </div>
     )
 }
