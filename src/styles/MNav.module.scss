@@ -1,0 +1,36 @@
+@use 'assets/abstracts.scss' as *;
+@use 'assets/utility.scss' as *;
+
+
+.Navbar {
+    @extend .--safe-width;
+  
+    display: flex;
+    align-items: center;
+    padding-top: spacer('sm');
+    justify-content: space-between;
+  
+    // TODO
+    >h3:first-child {
+      @extend .--font-title;
+  
+      color: $dark;
+  
+      em {
+        text-transform: uppercase;
+        font-style: normal;
+  
+        // color: $dark;
+      }
+    }
+  
+    >a:last-child {
+      place-content: center;
+      border-radius: 1.4em;
+      padding: 8px;
+  
+      &:hover {
+        background-color: $blue-light;
+      }
+    }
+  }

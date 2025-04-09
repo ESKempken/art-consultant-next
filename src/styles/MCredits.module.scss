@@ -1,0 +1,18 @@
+@use 'assets/abstracts.scss' as *;
+@use 'assets/utility.scss' as *;
+
+
+.Credits {
+    @extend .--safe-width;
+  
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  
+    &__footNotes {
+      // FIXME
+      font-size: font('sm');
+      color: $dark;
+    }
+  }
+  
