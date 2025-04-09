@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/PAbout.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Components
 import TLayoutPage from "@/components/TLayoutPage";
@@ -18,6 +18,7 @@ export default function About() {
     const [showNav, setShowNav] = useState(true);
     const [cropFrame, setCropFrame] = useState(0);
 
+    debugger;
     return (
         <>
             <Head>

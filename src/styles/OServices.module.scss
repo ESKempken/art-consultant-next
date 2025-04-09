@@ -2,12 +2,9 @@
 @use 'assets/utility.scss' as *;
 
 
-.Services {
-    // padding-bottom: spacer('lg');
-  
+.Services {  
     @extend .--safe-width;
     @include clip(text);
-  
     @include breakpoint('md') {
       margin-bottom: spacer('xxxl');
     }
@@ -23,18 +20,17 @@
     }
   
     &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: spacer('md');     
       margin-left: spacer('xl');
       margin-right: spacer('xl');
-  
+      
       @include breakpoint('md') {
         margin-left: spacer('md');
         margin-right: 0;
       }
-  
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: spacer('md');
   
       li {
         min-width: 220px;
