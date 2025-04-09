@@ -19,18 +19,13 @@ export default function TTrack({ setShowNav, setCropFrame, children }: TTrackPro
             const percentage = travelProgress(anchorTop, anchorBot);
 
             if (percentage === 100) {
+                setShowNav(true);
+            } else {
                 setShowNav(false);
+                setCropFrame(percentage);
             }
-
-            // Cal: Ease in
-            setCropFrame(Math.pow(100, (percentage / 100)) || 0);
-
-            console.log(percentage)
-
-            // Cal: Fraction of 75% FIXME
-            // const edgeSpacer = percentage * 0.125 + '%';
-            // document.body.style.setProperty('--crop', edgeSpacer);
         }
+
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
