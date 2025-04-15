@@ -44,9 +44,7 @@ export default function About() {
             </Head>
 
             <body>
-                <div className={styles.About__view}>
-                    <TFrame cropFrame={cropFrame}/>
-                </div>
+                <TFrame cropFrame={cropFrame}/>
 
                 <main className={`${geistMono.variable}`}>
 
@@ -59,7 +57,7 @@ export default function About() {
                         <OServices />
                     </section>
 
-                    {/* <TTrack setShowNav={setShowNav} setCropFrame={setCropFrame}> */}
+                    <TTrack setShowNav={setShowNav} setCropFrame={setCropFrame}>
                         <section className={styles.About__summary}>
                             <TLayoutPage
                                 header={<MNav showNav={showNav} />}
@@ -67,7 +65,7 @@ export default function About() {
                                 footer={<MCredits />}
                             />
                         </section>
-                    {/* </TTrack> */}
+                    </TTrack>
                     
                 </main>
             </body>

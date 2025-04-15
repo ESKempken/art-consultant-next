@@ -13,43 +13,5 @@
   
     @extend .--safe-width;
   }
-
-  
-  @keyframes scale-frame {
-    0% {
-      background-color: blue;
-    }
-
-    100% {
-      background-color: red;
-    }
-  }
-
-  &__summary {
-    scroll-timeline: --my-scroller inline;
-  }
-    
-  &__view {
-    z-index: 1;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // height: 100vh;
-    // width: 100%;
-    // max-width: 100%;
-    // position: relative;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    border: solid 5px red;
-
-    animation: scale-frame ease-in;
-    animation-timeline: --my-scroller;
-
-  }
 }
 

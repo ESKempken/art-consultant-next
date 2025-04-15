@@ -6,15 +6,15 @@ export default function TFrame({ cropFrame, children }: { cropFrame: number, chi
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        containerRef.current!.style.setProperty('--crop', `${cropFrame}`);
+        containerRef.current!.style.setProperty('--crop', `-${cropFrame}s`);
 
     }, [cropFrame]);
 
 
     return (
         <div>
-            <div className={styles.Frame}>
-                <div className={styles.Frame__container} ref={containerRef}>
+            <div className={styles.Frame} ref={containerRef}>
+                <div className={styles.Frame__container}>
                     <div className={styles.Frame__edge}></div>
                     <div className={styles.Frame__edge}></div>
                     <div className={styles.Frame__edge}></div>

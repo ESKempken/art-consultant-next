@@ -11,6 +11,8 @@
 
 
 .Frame {
+  --crop: 0;
+
   z-index: 1;
   top: 0;
   position: fixed;
@@ -26,24 +28,29 @@
   // }
   
   &__container {
-    // height: 100%;height
-    // width: 100%;width
     max-width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    // animation: scale-frame ease-in;
+    animation-name: scale-frame;
+    animation-duration: 100s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-play-state: paused; 
+    animation-delay: var(--crop);
 
-    // @keyframes scale-frame {
-    //   0% {
-    //     background-color: red;
-    //   }
+    @keyframes scale-frame {
+      0% {
+        height: 100%;
+        width: 100%;
+      }
 
-    //   100% {
-    //     background-color: white;
-    //   }
-    // }
+      100% {
+        height: $frame-length;
+        width: 75%;
+      }
+    }
   }
 
   &__edge {
