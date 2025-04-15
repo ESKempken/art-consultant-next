@@ -33,17 +33,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: scale-frame ease-in;
+    // animation: scale-frame ease-in;
 
-    @keyframes scale-frame {
-      0% {
-        background-color: red;
-      }
+    // @keyframes scale-frame {
+    //   0% {
+    //     background-color: red;
+    //   }
 
-      100% {
-        background-color: white;
-      }
-    }
+    //   100% {
+    //     background-color: white;
+    //   }
+    // }
   }
 
   &__edge {
