@@ -4,7 +4,6 @@
 
 .LayoutPage {
     height: 100vh;
-    border-left: red solid 3px;
     width: 100%;
     position: relative;
   
@@ -13,12 +12,14 @@
     }
   
     &__header {
+      z-index: 2;
       position: absolute;
       width: 100%;
       top: 0;
     }
   
     &__footer {
+      z-index: 2;
       bottom: 0;
       position: absolute;
       width: 100%;
