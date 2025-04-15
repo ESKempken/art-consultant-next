@@ -1,77 +1,100 @@
 @use 'assets/abstracts.scss' as *;
+@use 'assets/utility.scss' as *;
+
+// SOON: css scroll-driven animations browser support. 
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations
+
+// Polyfill
+// https://github.com/flackr/scroll-timeline
+
+
 
 
 .Frame {
-  --crop: 0;
+  z-index: 1;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // pointer-events: none;pointer-events
 
+  // @include breakpoint('md') {
+  //   display: none;display
+  // }
   
+  &__container {
+    // height: 100%;height
+    // width: 100%;width
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scale-frame ease-in;
+
+    @keyframes scale-frame {
+      0% {
+        background-color: red;
+      }
+
+      100% {
+        background-color: white;
+      }
+    }
+  }
+
+  &__edge {
+    position: absolute;
+    background-color: $gold;
+
+    &:nth-child(1) {
+      left: 0;
+      clip-path: polygon(0 0, 100% $frame-thickness, 100% calc(100% - $frame-thickness), 0 100%);
+      height: $frame-length;
+      width: $frame-thickness;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      clip-path: polygon(0 0, 100% 0, calc(100% - $frame-thickness) 100%, $frame-thickness 100%);
+      width: $frame-length;
+      height: $frame-thickness;
+    }
+
+    &:nth-child(3) {
+      right: 0;
+      clip-path: polygon(0 $frame-thickness, 100% 0, 100% 100%, 0 calc(100% - $frame-thickness));
+      height: $frame-length;
+      width: $frame-thickness;
+    }
+
+    &:nth-child(4) {
+      bottom: 0;
+      clip-path: polygon($frame-thickness 0%, calc(100% - $frame-thickness) 0%, 100% 100%, 0% 100%);
+      width: $frame-length;
+      height: $frame-thickness;
+    }
+  }
+
+  // TODO Texture and shade frame
+  // &.--texture {
+  //   >div {
+  //     $att: white;$att
+
+  //     background-image:
+  //       linear-gradient(
+  //         to left,
+  //         rgba($att, 0.5) 0%,
+  //         rgba($att, 1) 15%,
+  //         rgba($att, 0.5) 40%,
+  //         rgba($att, 0) 70%,
+  //         rgba($att, 0.5) 85%,
+  //         rgba($att, 0) 100%
+  //       );background-image
+  //     background-blend-mode: overlay;background-blend-mode
+  //   }
+  // }
 }
-
-
-// .Frame {
-//   z-index: 1;
-//   top: 0;
-//   position: fixed;
-//   height: 100vh;
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   pointer-events: none;
-
-//   @include breakpoint('md') {
-//     display: none;
-//   }
-
-//   &__edge {
-//     position: absolute;
-//     background-color: $gold;
-
-//     &:nth-child(1) {
-//       left: var(--crop);
-//       clip-path: polygon(0 0, 100% $frame-thickness, 100% calc(100% - $frame-thickness), 0 100%);
-//       height: $frame-length;
-//       width: $frame-thickness;
-//     }
-
-//     &:nth-child(2) {
-//       top: var(--crop);
-//       clip-path: polygon(0 0, 100% 0, calc(100% - $frame-thickness) 100%, $frame-thickness 100%);
-//       width: $frame-length;
-//       height: $frame-thickness;
-//     }
-
-//     &:nth-child(3) {
-//       right: var(--crop);
-//       clip-path: polygon(0 $frame-thickness, 100% 0, 100% 100%, 0 calc(100% - $frame-thickness));
-//       height: $frame-length;
-//       width: $frame-thickness;
-//     }
-
-//     &:nth-child(4) {
-//       bottom: var(--crop);
-//       clip-path: polygon($frame-thickness 0%, calc(100% - $frame-thickness) 0%, 100% 100%, 0% 100%);
-//       width: $frame-length;
-//       height: $frame-thickness;
-//     }
-//   }
-
-//   // TODO Texture and shade frame
-//   &.--texture {
-//     >div {
-//       $att: white;
-
-//       background-image:
-//         linear-gradient(
-//           to left,
-//           rgba($att, 0.5) 0%,
-//           rgba($att, 1) 15%,
-//           rgba($att, 0.5) 40%,
-//           rgba($att, 0) 70%,
-//           rgba($att, 0.5) 85%,
-//           rgba($att, 0) 100%
-//         );
-//       background-blend-mode: overlay;
-//     }
-//   }
-// }

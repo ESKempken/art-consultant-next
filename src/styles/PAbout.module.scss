@@ -2,7 +2,8 @@
 @use 'assets/abstracts.scss' as *;
 
 
-.Splash {
+.About {
+  &__splash {
     padding-top: spacer('xxxl');
     display: flex;
     justify-content: space-between;
@@ -12,3 +13,23 @@
   
     @extend .--safe-width;
   }
+
+  &__summary {
+      animation: scale-frame ease-in;
+      animation-timeline: scroll(root block);
+    }
+
+    
+  // &__view {  
+  //   @keyframes scale-frame {
+  //     0% {
+  //       background-color: transparent;
+  //     }
+
+  //     100% {
+  //       background-color: $blue-light;
+  //     }
+  //   }
+  // }
+}
+

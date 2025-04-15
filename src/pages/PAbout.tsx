@@ -44,30 +44,32 @@ export default function About() {
             </Head>
 
             <body>
-                <TFrame cropFrame={cropFrame}>
-                    <main className={`${geistMono.variable}`}>
+                <div className={styles.About__view}>
+                    <TFrame cropFrame={cropFrame}/>
+                </div>
 
-                        <section className={styles.Splash}>
-                            <OInfo />
-                            <OGallery />
+                <main className={`${geistMono.variable}`}>
+
+                    <section className={styles.About__splash}>
+                        <OInfo />
+                        <OGallery />
+                    </section>
+
+                    <section>
+                        <OServices />
+                    </section>
+
+                    {/* <TTrack setShowNav={setShowNav} setCropFrame={setCropFrame}> */}
+                        <section className={styles.About__summary}>
+                            <TLayoutPage
+                                header={<MNav showNav={showNav} />}
+                                body={<OSummary />}
+                                footer={<MCredits />}
+                            />
                         </section>
-
-                        <section>
-                            <OServices />
-                        </section>
-
-                        <TTrack setShowNav={setShowNav} setCropFrame={setCropFrame}>
-                            <section className={styles.Splash}>
-                                <TLayoutPage
-                                    header={<MNav showNav={showNav} />}
-                                    body={<OSummary />}
-                                    footer={<MCredits />}
-                                />
-                            </section>
-                        </TTrack>
-                        
-                    </main>
-                </TFrame>
+                    {/* </TTrack> */}
+                    
+                </main>
             </body>
         </>
     );
