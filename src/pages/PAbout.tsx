@@ -38,7 +38,6 @@ export default function About() {
                 <link rel="icon" href="/assets/logo-gold.svg" type="image/x-icon"></link>
                 <meta charSet="UTF-8"/>
                 {/* FIXME */}
-                <link rel="preload" href="https://use.typekit.net/kyn8apf.css" as="style"/>
                 <link rel="stylesheet" href="https://use.typekit.net/kyn8apf.css" />
                 {/* <script type="module" defer src="./ts/main.ts"></script> */}
             </Head>

@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: spacer('sm');
   // pointer-events: none;pointer-events
 
   // @include breakpoint('md') {
@@ -47,8 +48,8 @@
       }
 
       100% {
-        height: $frame-length;
-        width: 75%;
+        height: $safe-height;
+        width: $safe-width;
       }
     }
   }
@@ -60,29 +61,31 @@
     &:nth-child(1) {
       left: 0;
       clip-path: polygon(0 0, 100% $frame-thickness, 100% calc(100% - $frame-thickness), 0 100%);
-      height: $frame-length;
+      height: $safe-height;
       width: $frame-thickness;
     }
 
     &:nth-child(2) {
       top: 0;
       clip-path: polygon(0 0, 100% 0, calc(100% - $frame-thickness) 100%, $frame-thickness 100%);
-      width: $frame-length;
+      width: $safe-width;
       height: $frame-thickness;
+      max-width: 100%;
     }
 
     &:nth-child(3) {
       right: 0;
       clip-path: polygon(0 $frame-thickness, 100% 0, 100% 100%, 0 calc(100% - $frame-thickness));
-      height: $frame-length;
+      height: $safe-height;
       width: $frame-thickness;
     }
 
     &:nth-child(4) {
       bottom: 0;
       clip-path: polygon($frame-thickness 0%, calc(100% - $frame-thickness) 0%, 100% 100%, 0% 100%);
-      width: $frame-length;
+      width: $safe-width;
       height: $frame-thickness;
+      max-width: 100%;
     }
   }
 
