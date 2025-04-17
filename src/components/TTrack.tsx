@@ -3,13 +3,14 @@ import { travelProgress } from "@/scripts/effects";
 
 
 interface TTrackProps {
-    setShowNav(value: boolean): void;
     setCropFrame(value: number): void;
+    setShowNav(value: boolean): void;
+    setShowTexture(value: boolean): void;
     children: React.ReactNode;
 }
 
 
-export default function TTrack({ setShowNav, setCropFrame, children }: TTrackProps) {
+export default function TTrack({ setCropFrame, setShowNav, setShowTexture, children }: TTrackProps) {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -26,9 +27,11 @@ export default function TTrack({ setShowNav, setCropFrame, children }: TTrackPro
 
             if (percentage === 100) {
                 setShowNav(true);
+                setShowTexture(true);
                 setCropFrame(100);
             } else {
                 setShowNav(false);
+                setShowTexture(false);
                 setCropFrame(percentage);
             }
         };
@@ -47,7 +50,7 @@ export default function TTrack({ setShowNav, setCropFrame, children }: TTrackPro
             resizeObserver.disconnect();
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [containerRef, setShowNav, setCropFrame]);
+    }, [containerRef, setCropFrame, setShowTexture, setShowNav]);
 
 
     return (

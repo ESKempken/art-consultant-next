@@ -23,6 +23,7 @@ const geistMono = Geist_Mono({
 
 export default function About() {
     const [showNav, setShowNav] = useState(true);
+    const [showTexture, setshowTexture] = useState(true);
     const [cropFrame, setCropFrame] = useState(0);
 
     // useEffect(() => {
@@ -43,7 +44,7 @@ export default function About() {
             </Head>
 
             <body>
-                <TFrame cropFrame={cropFrame}/>
+                <TFrame cropFrame={cropFrame} showTexture={showTexture}/>
 
                 <main className={`${geistMono.variable}`}>
 
@@ -56,7 +57,7 @@ export default function About() {
                         <OServices />
                     </section>
 
-                    <TTrack setShowNav={setShowNav} setCropFrame={setCropFrame}>
+                    <TTrack setCropFrame={setCropFrame} setShowNav={setShowNav}  setShowTexture={setshowTexture}>
                         <section className={styles.About__summary}>
                             <TLayoutPage
                                 header={<MNav showNav={showNav} />}

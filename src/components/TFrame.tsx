@@ -2,18 +2,30 @@ import styles from "@/styles/TFrame.module.scss";
 import { useEffect, useRef } from "react";
 
 
-export default function TFrame({ cropFrame, children }: { cropFrame: number, children: React.ReactNode }) {
-    const containerRef = useRef<HTMLDivElement>(null);
+interface TFrameProps { 
+    cropFrame: number, 
+    showTexture: boolean,
+    children: React.ReactNode 
+}
+
+export default function TFrame({ cropFrame, showTexture, children }: TFrameProps) {
+    const frameRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        containerRef.current!.style.setProperty('--crop', `-${cropFrame}s`);
-
+        frameRef.current!.style.setProperty('--crop', `-${cropFrame}s`);
     }, [cropFrame]);
 
+    useEffect(() => {
+        if (showTexture) {
+            frameRef.current!.classList.add('--texture');
+        } else {
+            frameRef.current!.classList.remove('--texture');
+        }
+    }, [showTexture]);
 
     return (
         <div>
-            <div className={styles.Frame} ref={containerRef}>
+            <div className={styles.Frame} ref={frameRef}>
                 <div className={styles.Frame__container}>
                     <div className={styles.Frame__edge}></div>
                     <div className={styles.Frame__edge}></div>
