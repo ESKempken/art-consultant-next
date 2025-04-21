@@ -5,8 +5,6 @@
     margin-left: spacer('xl');
     display: flex;
   
-    @include clip(text);
-  
     @include breakpoint('md') {
       margin-left: spacer('md');
     }
@@ -30,8 +28,6 @@
         bottom: -10%;
         height: 80%;
       }
-  
-      @include clip(padding-box);
     }
   
     &__address {

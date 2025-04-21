@@ -5,15 +5,12 @@
 .About {
     max-width: 500px;
   
-    @include clip(text);
-  
     &__title {
       @extend .--font-title;
   
       >h1:first-child {
         text-transform: uppercase;
-  
-        @include clip(text, $gold);
+        color: $gold;
       }
     }
   

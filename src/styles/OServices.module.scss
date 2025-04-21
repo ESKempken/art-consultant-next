@@ -4,7 +4,6 @@
 
 .Services {  
     @extend .--safe-width;
-    @include clip(text);
     @include breakpoint('md') {
       margin-bottom: spacer('xxxl');
     }

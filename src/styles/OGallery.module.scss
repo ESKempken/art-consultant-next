@@ -15,8 +15,6 @@
       border-radius: 4px;
       position: relative;
   
-      @include clip(content-box);
-  
       &:nth-child(1) {
         img {
           @include format-image('lg');

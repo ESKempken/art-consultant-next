@@ -12,8 +12,6 @@
     background-image: url('/assets/texture-noise_300x300.png'); // source - https://www.cssmatic.com/noise-texture
     background-color: $pink-light;
   
-    @include clip(padding-box);
-  
     &__wrapper {
       // FIXME
       padding: spacer('xl');
