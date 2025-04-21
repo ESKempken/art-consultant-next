@@ -43,7 +43,7 @@ export default function About() {
                 {/* <script type="module" defer src="./ts/main.ts"></script> */}
             </Head>
 
-            <body>
+            <body className={styles.About}>
                 <TFrame cropFrame={cropFrame} showTexture={showTexture}/>
 
                 <main className={`${geistMono.variable}`}>

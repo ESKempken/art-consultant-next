@@ -3,7 +3,16 @@
 
 
 .About {
-  &__splash {
+  background: radial-gradient(
+    circle at 100px 100px,
+    black 15%,
+    red 20%
+  );
+  background-attachment: fixed;
+  color: transparent;
+  background-clip: text;
+
+&__splash {
     padding-top: spacer('xxxl');
     display: flex;
     justify-content: space-between;
@@ -14,4 +23,3 @@
     @extend .--safe-width;
   }
 }
-
