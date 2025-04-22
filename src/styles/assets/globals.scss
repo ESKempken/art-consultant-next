@@ -5,7 +5,8 @@
 :root {
   --background-color: #{abstracts.$light};
   --foreground-color: #{abstracts.$dark};
-  --crop: 25;
+  --pointer-x: 0;
+  --pointer-y: 0;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -57,7 +58,7 @@ a {
 // TODO WIP
 section {
   background: radial-gradient(
-    circle at var(--pointer-position),
+    circle at var(--pointer-x, 10) var(--pointer-y, 10),
     abstracts.$blue-light 100px,
     abstracts.$dark 106px,
   );

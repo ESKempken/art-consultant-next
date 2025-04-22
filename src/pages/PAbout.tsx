@@ -31,10 +31,8 @@ export default function About() {
     useEffect(() => {
 
         const handlePointer = (event: MouseEvent) => {
-            document.documentElement.style.setProperty(
-                '--pointer-position',
-                `${event.clientX}px ${event.clientY}px`
-            );
+            document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
+            document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
         }
 
         document.addEventListener('mousemove', handlePointer);

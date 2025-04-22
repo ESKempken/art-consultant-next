@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   border: spacer('sm') solid var(--background-color);
-  pointer-events: none;
+  // pointer-events: none;
 
   &::after, &::before {
         content: '';
@@ -116,8 +116,12 @@
       background-blend-mode: overlay;
   }
 
-  &[data-shadow='true'] &__edge{
-    box-shadow: (0 0 0.5rem rgba(black, 0.5));
+  // TODO WIP
+  &[data-shadow='true'] &__container {
+    overflow: visible;
+    box-shadow:   
+      calc(var(--pointer-x) * 100 / 1000) calc(var(--pointer-y) * 100 / 1000) 1em black,
+      calc(var(--pointer-x) * 100 / -1000) calc(var(--pointer-y) * 100 / -1000) 1em red,
   }
 }
 
