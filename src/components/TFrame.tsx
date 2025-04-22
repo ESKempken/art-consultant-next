@@ -24,8 +24,10 @@ export default function TFrame({ cropFrame, showTexture, showShadow }: TFramePro
         const refY = rect.top + rect.height / 2;
 
         const handlePointer = (event: MouseEvent) => {
-            frameEl.style.setProperty('--pointer-x', `${event.clientX - refX}px`);
-            frameEl.style.setProperty('--pointer-y', `${event.clientY - refY}px`);
+            frameEl.style.setProperty('--pointer-relative-x', `${event.clientX - refX}px`);
+            frameEl.style.setProperty('--pointer-relative-y', `${event.clientY - refY}px`);
+            frameEl.style.setProperty('--pointer-absolute-x', `${event.clientX}px`);
+            frameEl.style.setProperty('--pointer-absolute-y', `${event.clientY}px`);
         }
 
         document.addEventListener('mousemove', handlePointer);
