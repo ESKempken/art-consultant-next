@@ -6,16 +6,15 @@ interface TFrameProps {
     cropFrame: number, 
     showTexture: boolean,
     showShadow: boolean,
-    children: React.ReactNode 
 }
 
-export default function TFrame({ cropFrame, showTexture, showShadow, children }: TFrameProps) {
+export default function TFrame({ cropFrame, showTexture, showShadow }: TFrameProps) {
     const frameRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         frameRef.current!.style.setProperty('--crop', `-${cropFrame}s`);
     }, [cropFrame]);
-    
+
 
     return (
         <div>
@@ -31,9 +30,6 @@ export default function TFrame({ cropFrame, showTexture, showShadow, children }:
                     <div className={styles.Frame__edge}></div>
                     <div className={styles.Frame__edge}></div>
                 </div>
-            </div>
-            <div>
-                {children}
             </div>
         </div>
     );

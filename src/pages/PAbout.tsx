@@ -22,9 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export default function About() {
-    const [showNav, setShowNav] = useState(true);
-    const [showTexture, setshowTexture] = useState(true);
-    const [cropFrame, setCropFrame] = useState(0);
+    const [trackProgress, setTrackProgress] = useState(0);
 
     // useEffect(() => {
     //     debugger;
@@ -59,22 +57,26 @@ export default function About() {
             </Head>
 
             <body className={styles.About}>
-                <TFrame cropFrame={cropFrame} showTexture={showTexture} />
+                <TFrame 
+                    cropFrame={trackProgress} 
+                    showTexture={trackProgress == 100} 
+                    showShadow={trackProgress == 100} 
+                />
 
                 <main className={`${geistMono.variable}`}>
 
-                    <section className={styles.About__splash}>
+                    {/* <section className={styles.About__splash}>
                         <OInfo />
                         <OGallery />
                     </section>
 
                     <section>
                         <OServices />
-                    </section>
+                    </section> */}
 
-                    <TTrack setCropFrame={setCropFrame} setShowNav={setShowNav} setShowTexture={setshowTexture}>
+                    <TTrack setProgress={setTrackProgress}>
                         <TLayoutPage
-                            header={<MNav showNav={showNav} />}
+                            header={<MNav showNav={trackProgress == 100} />}
                             body={<OSummary />}
                             footer={<MCredits />}
                         />
