@@ -28,19 +28,6 @@ export default function About() {
     //     debugger;
     // }, []);
 
-    useEffect(() => {
-
-        const handlePointer = (event: MouseEvent) => {
-            document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
-            document.documentElement.style.setProperty('--pointer-y', `${event.clientY}px`);
-        }
-
-        document.addEventListener('mousemove', handlePointer);
-        return () => {
-            document.removeEventListener('mousemove', handlePointer);
-        };
-    })
-
     return (
         <>
             <Head>
@@ -63,14 +50,14 @@ export default function About() {
 
                 <main className={`${geistMono.variable}`}>
 
-                    {/* <section className={styles.About__splash}>
+                    <section className={styles.About__splash}>
                         <OInfo />
                         <OGallery />
                     </section>
 
                     <section>
                         <OServices />
-                    </section> */}
+                    </section>
 
                     <TTrack setProgress={setTrackProgress}>
                         <TLayoutPage

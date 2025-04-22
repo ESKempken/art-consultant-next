@@ -34,8 +34,16 @@
       align-self: flex-end;
       margin-left: spacer('lg');
   
-      p > a:last-child {
-        font-size: font('sm');
+      // TODO <p> tag for formatting yet i still resize here. Dumb.
+      p > a {
+        &:hover {
+          color: $blue;
+          text-decoration: underline;
+        }
+
+        &:last-child {
+          font-size: font('sm');
+        }
       }
     }
   
@@ -47,10 +55,9 @@
   
     &__icon {
       height: 1.2em;
-      filter: unset;
   
       &:hover {
-        filter: brightness(0) saturate(100%);
+        background-color: $blue;
       }
     }
   }

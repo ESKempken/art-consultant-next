@@ -15,6 +15,25 @@ export default function TFrame({ cropFrame, showTexture, showShadow }: TFramePro
         frameRef.current!.style.setProperty('--crop', `-${cropFrame}s`);
     }, [cropFrame]);
 
+    
+    useEffect(() => {
+        const frameEl = frameRef.current!;
+
+        const rect = frameEl.getBoundingClientRect();
+        const refX = rect.left + rect.width / 2;
+        const refY = rect.top + rect.height / 2;
+
+        const handlePointer = (event: MouseEvent) => {
+            frameEl.style.setProperty('--pointer-x', `${event.clientX - refX}px`);
+            frameEl.style.setProperty('--pointer-y', `${event.clientY - refY}px`);
+        }
+
+        document.addEventListener('mousemove', handlePointer);
+        return () => {
+            document.removeEventListener('mousemove', handlePointer);
+        };
+    })
+
 
     return (
         <div>

@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   border: spacer('sm') solid var(--background-color);
-  // pointer-events: none;
+  pointer-events: none;
 
   &::after, &::before {
         content: '';
@@ -120,8 +120,8 @@
   &[data-shadow='true'] &__container {
     overflow: visible;
     box-shadow:   
-      calc(var(--pointer-x) * 100 / 1000) calc(var(--pointer-y) * 100 / 1000) 1em black,
-      calc(var(--pointer-x) * 100 / -1000) calc(var(--pointer-y) * 100 / -1000) 1em red,
+      calc(var(--pointer-x) / 100) calc(var(--pointer-y) / 100) 0.3em white,
+      calc(var(--pointer-x) / -100) calc(var(--pointer-y) / -100) 0.3em rgb(0 0 0 / 40%),
   }
 }
 
