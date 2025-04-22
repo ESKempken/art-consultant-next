@@ -100,12 +100,7 @@
   }
 
 
-  // FIXME chain or CSR selector not working in Next css modules
-  &.--texture {
-   background-color: red;
-  }
-
-  &.--texture &__edge {
+  &[data-texture='true'] &__edge {
       $att: white;
 
       background-image:
@@ -119,5 +114,11 @@
           rgba($att, 0) 100%
         );
       background-blend-mode: overlay;
-    }
+  }
+
+  &[data-shadow='true'] &__edge{
+    box-shadow: (0 0 0.5rem rgba(black, 0.5));
+  }
 }
+
+
