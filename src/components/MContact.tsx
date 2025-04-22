@@ -17,11 +17,11 @@ export default function Contact() {
 
                 <div className={styles.Contact__social}>
                     <a href="https://www.linkedin.com/in/caroline-field-147a24116" target="_blank">
-                        <img className="Contact__icon" src="assets/icon_LinkedIn.svg" alt="LinkedIn logo" />
+                        <img className="Contact__icon" src="assets/icon_LinkedIn-gold.svg" alt="LinkedIn logo" />
                     </a>
 
                     <a href="https://www.instagram.com/caroline.field.art" target="_blank">
-                        <img className="Contact__icon" src="assets/icon_Instagram.svg" alt="Instagram logo" />
+                        <img className="Contact__icon" src="assets/icon_Instagram-gold.svg" alt="Instagram logo" />
                     </a>
                 </div>
             </div>

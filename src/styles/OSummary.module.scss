@@ -13,8 +13,7 @@
     background-color: $pink-light;
   
     &__wrapper {
-      // FIXME
-      padding: spacer('xl');
+      padding: spacer('xxl') spacer('xl');
     }
   
     &__layout {
@@ -61,6 +60,10 @@
       margin-top: auto;
       align-self: flex-end;
       text-align: end;
+
+      >h3 {
+        font-size: font('md');
+      }
   
       >a[aria-label='phone'] {
         @extend .--font-title;

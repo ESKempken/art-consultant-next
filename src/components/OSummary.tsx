@@ -18,15 +18,16 @@ export default function OSummary() {
                     </ul>
 
                     <div className={styles.CallToAction__contact}>
+                        <h3>Caroline Field</h3>
+                        <p>Australian Art Consultant</p>
+                        <br />
                         <a href="tel:+61432000777" aria-label="phone">+61 432 000 777</a><br />
                         <a href="mailto:" aria-label="email">info@carolinefield.com</a>
                     </div>
 
                     <div>
                         <p className={styles.CallToAction__callToAction}>
-                            With a deep understanding of Australian art, <b>Caroline Field</b> tailors her support
-                            to
-                            you project. Reach out to discuss how.
+                            Get in touch to begin your project.
                         </p>
                     </div>
                 </div>
