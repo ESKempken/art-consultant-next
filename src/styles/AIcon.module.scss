@@ -1,0 +1,16 @@
+@use 'assets/abstracts.scss' as abstracts;
+
+.AIcon {
+    height: 1em;
+    width: 1em;
+
+    @each $key, $name in abstracts.$colors {
+        &[data-color~="#{$key}"] path {
+            fill: $name
+        }
+
+        &[data-hover~="#{$key}"]:hover path {
+            fill: $name;
+        }
+    }
+}
