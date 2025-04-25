@@ -12,6 +12,7 @@ $pink: #f582c0;
 $pink-light: #ffd4e7; // %50
 
 $spacers: ('sm': 10px, 'md': 30px, 'lg': 48px, 'xl': 64px, 'xxl': 100px, 'xxxl': 200px);
+$colors: ('dark': $dark, 'light': $light, 'gold': $gold, 'blue': $blue, 'blue-light': $blue-light, 'pink': $pink, 'pink-light': $pink-light);
 $breakpoints: ('sm': 576px, 'md': 768px, 'lg': 1080px, 'xl': 1300px);
 $font-sizes: ('sm': 0.85em, 'md': 1.1em, 'lg': 1.5em, 'xl': 3em);
 $img-sm: 160px;

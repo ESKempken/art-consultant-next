@@ -143,8 +143,8 @@
   &[data-shadow='true'] &__container {
     overflow: visible;
     box-shadow:   
-      calc(var(--pointer-relative-x) / 100) calc(var(--pointer-relative-y) / 100) 0.3em white,
-      calc(var(--pointer-relative-x) / -100) calc(var(--pointer-relative-y) / -100) 0.5em rgb(0 0 0 / 50%),
+      // calc(var(--pointer-relative-x) / 160) calc(var(--pointer-relative-y) / 160) 0.2em rgba(255 255 255 / 50%),
+      calc(var(--pointer-relative-x) / -80) calc(var(--pointer-relative-y) / -80) 0.5em rgb(0 0 0 / 50%),
   }
 }
 

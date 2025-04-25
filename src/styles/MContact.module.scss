@@ -52,12 +52,4 @@
       margin-top: spacer('sm');
       gap: spacer('sm');
     }
-  
-    &__icon {
-      height: 1.2em;
-  
-      &:hover {
-        background-color: $blue;
-      }
-    }
   }

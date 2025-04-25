@@ -1,4 +1,5 @@
 import styles from "@/styles/MContact.module.scss";
+import AIcon from "./AIcon";
 
 
 export default function Contact() {
@@ -16,12 +17,12 @@ export default function Contact() {
                 </p>
 
                 <div className={styles.Contact__social}>
-                    <a href="https://www.linkedin.com/in/caroline-field-147a24116" target="_blank">
-                        <img className="Contact__icon" src="assets/icon_LinkedIn-gold.svg" alt="LinkedIn logo" />
+                    <a href="https://www.linkedin.com/in/caroline-field-147a24116" target="_blank">                        
+                        <AIcon name="linkedin" color='gold' hover="blue" />
                     </a>
 
                     <a href="https://www.instagram.com/caroline.field.art" target="_blank">
-                        <img className="Contact__icon" src="assets/icon_Instagram-gold.svg" alt="Instagram logo" />
+                        <AIcon name="instagram" color='gold' hover="blue" />
                     </a>
                 </div>
             </div>

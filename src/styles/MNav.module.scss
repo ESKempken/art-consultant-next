@@ -26,11 +26,6 @@
   
     >a:last-child {
       place-content: center;
-      border-radius: 1.4em;
       padding: 8px;
-  
-      &:hover {
-        background-color: $blue-light;
-      }
     }
   }

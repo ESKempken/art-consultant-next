@@ -1,4 +1,5 @@
 import styles from "@/styles/MNav.module.scss";
+import AIcon from "./AIcon";
 
 export default function MNav({showNav}: {showNav: boolean}) {
 
@@ -9,7 +10,7 @@ export default function MNav({showNav}: {showNav: boolean}) {
             <h3>/<em> Caroline Field</em></h3>
 
             <a href="#top">
-                <img src="../assets/icon-arrow-black.svg" alt="scroll to top" />
+                <AIcon name="arrow" color='dark' hover="blue" />
             </a>
         </nav>
     )
