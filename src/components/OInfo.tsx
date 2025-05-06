@@ -7,7 +7,7 @@ export default function Info() {
     <div className={styles.About}>
 
       <div className={styles.About__title}>
-        <h1>Caroline Field</h1>
+        <h1>Theresa Field</h1>
         <h2>Australian Art Consultant</h2>
         <hr data-size="lg" />
       </div>

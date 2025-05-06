@@ -18,11 +18,11 @@ export default function OSummary() {
                     </ul>
 
                     <div className={styles.CallToAction__contact}>
-                        <h3>Caroline Field</h3>
+                        <h3>Theresa Field</h3>
                         <p>Australian Art Consultant</p>
                         <br />
                         <a href="tel:+61432000777" aria-label="phone">+61 432 000 777</a><br />
-                        <a href="mailto:" aria-label="email">info@carolinefield.com</a>
+                        <a href="mailto:" aria-label="email">info@theresafield.com</a>
                     </div>
 
                     <div>

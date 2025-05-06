@@ -5,8 +5,8 @@
 :root {
   --background-color: #{abstracts.$light};
   --foreground-color: #{abstracts.$dark};
-  --pointer-x: 0;
-  --pointer-y: 0;
+  --pointer-absolute-x: 0;
+  --pointer-absolute-y: 0;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -56,17 +56,26 @@ a {
 }
 
 // TODO WIP
-section {
-  background: radial-gradient(
-    circle at var(--pointer-x, 10) var(--pointer-y, 10),
-    abstracts.$blue-light 100px,
-    abstracts.$dark 106px,
-  );
-  background-attachment: fixed;
-  background-clip: text;
-  color: transparent;
-}
+// section {
+//   background: radial-gradient(
+//     circle at var(--pointer-absolute-x, 10) var(--pointer-absolute-y, 10),
+//     abstracts.$blue-light 10px,
+//     abstracts.$dark 200px,
+//   );
+//   background-attachment: fixed;
+//   background-clip: text;
+//   color: transparent;
+// }
 
+// main {
+//   background: 
+//   radial-gradient(
+//       circle at var(--pointer-absolute-x, 0) var(--pointer-absolute-y, 0),
+//       black 0,
+//       transparent 200px
+//   );
+//   background-attachment: fixed;
+// }
 
 p {
   line-height: 1.4;
