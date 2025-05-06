@@ -7,7 +7,7 @@ export default function MNav({showNav}: {showNav: boolean}) {
 
     return (
         <nav className={styles.Navbar}>
-            <h3>/<em> Theresa Field</em></h3>
+            <h3>/<em> Caroline Field</em></h3>
 
             <a href="#top">
                 <AIcon name="arrow" color='dark' hover="blue" />
