@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <div className={styles.Contact}>
             <div className={styles.Contact__avatar}>
-                <img src="assets/avatar-placeholder-2.png" alt="Photo of Caroline Field" />
+                <img src="assets/avatar-placeholder-3.png" alt="Photo of Caroline Field" />
                 <img src="assets/logo-gold.svg" alt="Caroline Field logo" />
             </div>
 
