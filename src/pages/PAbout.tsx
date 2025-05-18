@@ -13,13 +13,6 @@ import TTrack from "@/components/TTrack";
 import MNav from "@/components/MNav";
 import MCredits from "@/components/MCredits";
 
-// FIXME
-import { Geist_Mono } from "next/font/google";
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 export default function About() {
     const [trackProgress, setTrackProgress] = useState(0);
@@ -43,9 +36,9 @@ export default function About() {
 
             <body>
                 <TFrame 
-                    cropFrame={trackProgress} 
-                    showTexture={trackProgress == 100} 
-                    showShadow={trackProgress == 100} 
+                    cropFrame={trackProgress}
+                    showTexture={trackProgress == 100}
+                    showShadow={trackProgress == 100}
                 />
 
                 <main className={styles.About}>
