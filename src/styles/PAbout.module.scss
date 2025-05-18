@@ -4,13 +4,26 @@
 
 .About {
   &__splash {
-    padding-top: spacer('xxxl');
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
     min-height: 100vh;
     gap: spacer('xl');
-  
+    padding-top: spacer('xxxl');
+    padding-bottom: spacer('xxl');
+
+    @extend .--safe-width;   
+
+    @include breakpoint('md') {
+      padding-top: spacer('xxl');
+    }
+  }
+
+  &__services {
     @extend .--safe-width;
+
+    @include breakpoint('md') {
+      margin-bottom: spacer('xxxl');
+    }
   }
 }

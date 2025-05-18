@@ -2,12 +2,7 @@
 @use 'assets/utility.scss' as *;
 
 
-.Services {  
-    @extend .--safe-width;
-    @include breakpoint('md') {
-      margin-bottom: spacer('xxxl');
-    }
-  
+.Services {
     &__title {
       @extend .--font-title;
   

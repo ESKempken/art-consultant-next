@@ -41,21 +41,21 @@ export default function About() {
                 {/* <script type="module" defer src="./ts/main.ts"></script> */}
             </Head>
 
-            <body className={styles.About}>
+            <body>
                 <TFrame 
                     cropFrame={trackProgress} 
                     showTexture={trackProgress == 100} 
                     showShadow={trackProgress == 100} 
                 />
 
-                <main className={`${geistMono.variable}`}>
+                <main className={styles.About}>
 
                     <section className={styles.About__splash}>
                         <OInfo />
                         <OGallery />
                     </section>
 
-                    <section>
+                    <section className={styles.About__services}>
                         <OServices />
                     </section>
 
