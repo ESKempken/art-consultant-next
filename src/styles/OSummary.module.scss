@@ -9,11 +9,21 @@
     max-height: 100%;
     margin: spacer('sm');
     position: relative;
-    background-image: url('/assets/texture-noise_300x300.png'); // source - https://www.cssmatic.com/noise-texture
+    background-image: url('/assets/texture-noise_300x300.png'); // source - https://www.cssmatic.com/noise-texture;sourcehttps
     background-color: $pink-light;
   
+  @include breakpoint('md') {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
     &__wrapper {
       padding: spacer('xxl') spacer('xl');
+      
+      @include breakpoint('md') {
+        padding: spacer('xxxl') spacer('md');
+      }
     }
   
     &__layout {
@@ -21,36 +31,42 @@
       flex-wrap: wrap;
       gap: spacer('xl') spacer('lg');
       justify-content: center;
+
+      @include breakpoint('md') {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
     }
   
     &__services {
       list-style: none;
       text-align: right;
-      transform: skewX(-20deg);
-  
+      transform: skewX(-20deg); 
+      
       @include breakpoint('md') {
         display: none;
       }
   
       li {
         transform: skewX(20deg); // Reverse child skew
-  
-        @extend .--font-title;
-  
         text-transform: uppercase;
         font-size: font('lg');
         line-height: font('lg');
-  
+
+        @extend .--font-title; 
+
         &::after {
           content: '';
           display: inline-block;
           vertical-align: sub;
           width: font('md');
           height: font('md');
-          margin-left: spacer('md');
           background-image: url('/assets/logo-pink.svg');
           background-size: contain;
           background-repeat: no-repeat;
+          margin-left: spacer('md');
+
+        
         }
       }
     }
@@ -60,6 +76,11 @@
       margin-top: auto;
       align-self: flex-end;
       text-align: end;
+
+      @include breakpoint('md') {
+        text-align: center;
+        align-self: center;
+      }
 
       >h3 {
         font-size: font('md');
